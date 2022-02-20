@@ -9,6 +9,7 @@ ua = UserAgent()
 class WatchDog:
 
     #url = "http://127.0.0.1:8080/HealthChecker"
+    #
     url = "https://watchdogserver.herokuapp.com/HealthChecker"
     def __init__(self, token):
         self.token = token
