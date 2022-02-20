@@ -22,18 +22,18 @@ class WatchDog:
                 print(cpu,memory)
                 json = {"token" : self.token,  "problem" : "HCk", "cpu" : cpu, "memory" : memory.percent}
 
-                response = requests.post(url=self.url,
-                                         json=json,
-                                         headers={'user-agent': f'{ua.random}'})
+                #response = requests.post(url=self.url,
+                #                         json=json,
+                #                         headers={'user-agent': f'{ua.random}'})
                 LastTime = time.time()
-                print(response.status_code)
+                #print(response.status_code)
 
     def send_error(self, error):
         json = {"token": self.token, "problem": str(error)}
-        r = requests.post(url=self.url,
-                            json=json,
-                            headers={'user-agent': f'{ua.random}'})
-        print(f"Sended error with code: {str(r.status_code)}")
+        #r = requests.post(url=self.url,
+        #                    json=json,
+        #                    headers={'user-agent': f'{ua.random}'})
+        #print(f"Sended error with code: {str(r.status_code)}")
 
     def user_file(self, dir):
         code = False
