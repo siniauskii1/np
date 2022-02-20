@@ -1,4 +1,7 @@
 from ServerKeeper import WatchDog
-bd = WatchDog("0facc7f4-37da-47c3-9518-e13a1a5e6d7e")
-
+import  requests
+bd = WatchDog("gretteret")
+json = {"token": 432424, "problem": "HCk", "cpu": 3, "memory": 5}
+url = "https://watchdogserver.herokuapp.com/HealthChecker"
+requests.post(url,json)
 bd.Start_watching("main.py")
