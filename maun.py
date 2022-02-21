@@ -1,7 +1,3 @@
-import  requests
-print("DOLBAEB")
-url = "https://watchdogserver.herokuapp.com/HealthChecker"
-while True:
-    requests.post(url)
-
-
+import requests
+r = requests.post(url = "https://watchdogserver.herokuapp.com/HealthChecker")
+print(r.status_code)
