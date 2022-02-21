@@ -1,8 +1,7 @@
 import  requests
-from fake_useragent import UserAgent
-ua = UserAgent()
- 
-url = "https://watchdogserver.herokuapp.com/HealthChecker"
-requests.post(url=url,headers={'user-agent': f'{ua.random}'})
 print("DOLBAEB")
+url = "https://watchdogserver.herokuapp.com/HealthChecker"
+while True:
+    requests.post(url)
+
 
